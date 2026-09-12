@@ -1,0 +1,101 @@
+schema_version = "1.0.0"
+
+id = "japa_tools"
+version = "0.1.8"
+name = "Japa Tools"
+tagline = "Tools for speeding up common Blender tasks"
+maintainer = "Gustavo (Japa) Franco"
+type = "add-on"
+blender_version_min = "4.5.5"
+license = ["SPDX:GPL-3.0-or-later"]
+
+tags = ["Modeling"]
+
+description = """
+# Japa Tools
+
+A comprehensive toolkit designed to streamline your Blender workflow, with specialized features for automotive modeling and general 3D asset creation.
+
+## Features
+
+### Selection Tools
+Quickly identify and select problematic meshes in your scene. Perfect for cleaning up complex car models with multiple parts.
+
+### Renaming Tools
+Organize your project with powerful renaming utilities. Keep your car parts, materials, and UV maps properly named for better project management.
+
+### Prefix Tools
+Specialized prefix system for automotive workflows. Quickly tag car parts (doors, hood, roof, wheels, etc.) and organize them into collections automatically.
+
+### Data Transfer Tools
+Efficiently transfer mesh data between objects, ideal for maintaining consistent topology across similar car parts.
+
+### Beta Utilities
+Advanced tools for mesh optimization and quality control, helping you maintain clean geometry in your automotive projects.
+"""
+
+release_notes = """
+## Version 0.1.8 - Automotive Workflow Update
+
+### New Features
+
+#### Prefix Tools System
+A complete prefix management system designed specifically for automotive modeling workflows:
+
+- **Car Part Prefixes**: Quick-access buttons for common car components:
+  - **FL/FR/RL/RR**: Front Left, Front Right, Rear Left, Rear Right wheel positions
+  - **HOOD**: Engine hood components
+  - **DOOR**: Door panels and handles
+  - **ROOF**: Roof sections and sunroofs
+  - **TRUNK**: Trunk lid and rear components
+  - **AERO**: Aerodynamic elements like spoilers and diffusers
+
+- **Stackable Prefixes**: Click multiple prefix buttons to build hierarchical naming. For example, clicking "DOOR" then "RR" on an object named "Black" creates "DOOR_RR_Black", perfect for organizing right-rear door components.
+
+- **Erase Prefix**: Quickly remove all prefixes from selected objects, returning them to their base names. Essential when reorganizing your car model structure.
+
+- **Create Collections**: Automatically group objects by their prefixes into organized collections. If you have multiple objects like "Door_RR_Black", "Door_RR_White", and "Door_RL_Primary", this tool creates "Door_RR" and "Door_RL" collections and moves the corresponding objects into them. Perfect for organizing complex car models with many parts.
+
+#### Enhanced Selection Tools
+- **Select Empty Meshes**: Now reports the exact number of empty meshes found. Essential for cleaning up car models where placeholder objects or deleted geometry might remain.
+
+### Improvements
+
+#### Modular Interface
+- **Collapsible Sections**: All tool categories now use dropdown menus for a cleaner, more organized interface. Keep only the tools you need visible while working on your car project.
+
+- **Default States**: All sections open by default except Beta Utilities, giving you immediate access to the most commonly used tools.
+
+#### Visual Enhancements
+- **Prefix Icons**: Each car part prefix button now displays a custom icon, making it faster to identify and select the right component type.
+
+### Existing Features
+
+#### Selection Tools
+- **Select Empty Meshes**: Find and select mesh objects with no vertices. Perfect for cleaning up car models after boolean operations or mesh cleanup.
+- **Select Heavy Meshes**: Identify meshes with more than 10,000 triangles. Helps optimize your car model's polygon count for better performance.
+- **Select Sharp Edge Verts**: Quickly find vertices on sharp edges, useful for maintaining clean edge flow in car body panels.
+
+#### Renaming Tools
+- **Rename with Material**: Automatically rename objects based on their active material. Keep your car parts organized by paint color or material type.
+- **Rename Data Blocks**: Ensure mesh data blocks match their object names, maintaining consistency across your project.
+- **UV Map Management**: Rename UV maps and remove inactive ones, keeping your UV layout organized for texturing car parts.
+
+#### Data Transfer Tools
+- **Data Transfer Modifier**: Quickly add data transfer modifiers to copy normals, vertex colors, or other mesh data between similar car parts, ensuring consistent shading and detail.
+
+#### Beta Utilities
+- **Join by Material**: Automatically join objects that share the same material. Useful for combining multiple car parts that use the same paint or material.
+- **Gap Finder**: Detect and select vertices that are very close together, helping identify potential mesh issues in your car model that could cause rendering problems.
+
+### Workflow Benefits
+
+This update significantly improves the workflow for automotive modelers by:
+- Providing quick access to car-specific naming conventions
+- Automating collection organization based on part types
+- Streamlining the process of managing complex multi-part vehicle models
+- Reducing time spent on repetitive naming and organization tasks
+
+Perfect for game asset creation, 3D visualization, and automotive design workflows.
+"""
+
